@@ -23,6 +23,7 @@ mysql -u root -p -e 'CREATE TABLE clustertest.mycluster ( id INT NOT NULL AUTO_I
 mysql -u root -p -e 'INSERT INTO clustertest.mycluster (name, ipaddress) VALUES ("db1", "1.1.1.1");'
 </pre>
 
+<pre>
 mysql -u root -p -e 'SELECT * FROM clustertest.mycluster;'
 Enter password: 
 +----+------+-----------+
@@ -30,8 +31,10 @@ Enter password:
 +----+------+-----------+
 | 2  | db1  | 1.1.1.1   |
 +----+------+-----------+
+</pre>
 
 Now do the check on node node2:
+<pre>
 mysql -u root -p -e 'SELECT * FROM clustertest.mycluster;'
 Enter password: 
 +----+------+-----------+
@@ -39,5 +42,5 @@ Enter password:
 +----+------+-----------+ 
 | 2  | db1  | 1.1.1.1   |
 +----+------+-----------+
-
+</pre>
 
